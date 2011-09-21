@@ -15,6 +15,7 @@ body {
   margin: 0 auto;
   margin-top: 21px;
   background:white;
+  border: 1px solid silver;
   box-shadow: 3px 5px 5px #ccc;
 }
 
