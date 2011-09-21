@@ -1,6 +1,8 @@
 ---
-layout: default
+layout: post
 title: Saving Django ImageField in code
+categories: django
+published: true
 ---
 Although I'm sure I'll run into a few little snags that need handling, the code for the new [social media search function] on the Alliance for Appalachia website is pretty much done. One little thing that I just finished up was copying profile images from Facebook and Twitter pages to associate with each feed. Accessing the images themselves was a piece of cake, thanks to the Facebook and Twitter API's, but programatically associating them with a Django ImageField and saving them was surprisingly tricky!
 

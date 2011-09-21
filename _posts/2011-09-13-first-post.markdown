@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: post
 title: First post
+published: true
 ---
 
 As you can see, things are a bit bare-bones around here.
