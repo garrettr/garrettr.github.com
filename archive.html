@@ -1,0 +1,21 @@
+---
+layout: default
+title: Writing
+---
+
+{% for post in site.posts limit:1 %}
+<h2>Just posted: <a href="{{ post.url }}">{{ post.title }}</a></h2>
+<p>
+{{ post.content | truncatewords: 100 }}<br/>
+<a href="{{ post.url }}">Read More >>></a>
+</p>
+{% endfor %}
+
+<strong>Archive ({{site.posts | size}} posts)</strong>
+<ol id="archive">
+  {% for post in site.posts %}
+  <li>
+  <span clas="date">{{ post.date | date: "%d %b %Y" }}</span> > <a href="{{ post.url }}">{{ post.title }}</a>
+  </li>
+  {% endfor %}
+</ol>
