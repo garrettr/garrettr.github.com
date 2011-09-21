@@ -1,0 +1,55 @@
+/* inspired by
+ * http://mark.reid.name/files/css/screen.css
+ */
+
+body {
+  font: 16px/1.4 Palatino, Georgia, "times new roman", serif;
+  color: #333;
+  background-color: whitesmoke;
+}
+
+#container {
+  width:70%;
+  min-width:500px;
+  padding: 16px;
+  margin: 0 auto;
+  margin-top: 21px;
+  background:white;
+  box-shadow: 3px 5px 5px #ccc;
+}
+
+img { -ms-interpolation-mode:bicubic; }
+
+p { margin: 0 0 1.5em 0; }
+
+a { text-decoration: none; color: #339 }
+a:hover { text-decoration: underline; color: #33f; }
+
+h1,h2,h3,h4 { 
+	line-height:1em; 
+	font-size:1.5em; 
+	font-weight: normal; 
+	clear: left; 	
+	font-family: 'lucida grande', sans-serif; 
+}
+h1 { margin-bottom: 1em; }
+h2 {
+	font-size: 100%;
+	line-height: 1.5em;
+	margin:1.5em 0 1.5em 0;
+	font-weight:bold;
+}
+h3 { font-size: 100%;
+	line-height: 1.5em;
+	margin: 1.5em 0 0 0;
+	font-weight: normal;
+	font-variant: small-caps;
+}
+
+hr { 
+	border-top: 1px solid silver;
+	border-bottom: none;
+	padding: 0;
+	margin: 1.46em 0 0 0;
+}
+
