@@ -10,10 +10,11 @@ body {
 
 #container {
   width:70%;
-  min-width:500px;
+  min-width:700px;
   padding: 16px;
   margin: 0 auto;
   margin-top: 21px;
+  margin-bottom: 42px;
   background:white;
   border: 1px solid silver;
   box-shadow: 3px 5px 5px #ccc;
@@ -23,7 +24,7 @@ img { -ms-interpolation-mode:bicubic; }
 
 p { margin: 0 0 1.5em 0; }
 
-pre { font-size:14px; margin-bottom: 1.5em; background: #ffe; padding: 12px; border: 1px solid silver; }
+pre { font-size:13px; margin-bottom: 1.5em; background: #ffe; padding: 12px; border: 1px solid silver; }
 
 a { text-decoration: none; color: #339 }
 a:hover { text-decoration: underline; color: #33f; }
