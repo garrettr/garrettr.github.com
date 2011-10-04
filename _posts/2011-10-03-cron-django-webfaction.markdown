@@ -47,14 +47,37 @@ see
 2.  [Webfaction documentation on cron](http://docs.webfaction.com/software/general.html#scheduling-tasks-with-cron)
 3.  [Wikipedia on cron - helpful description of job syntax](http://en.wikipedia.org/wiki/Cron)
 
+## Working with multiple Django/Python projects
+
+You have multiple Python projects, but only one crontab. The only problem with the above solution is it seems to limit you to running manage.py scripts from a
+single Django application, or potentially running into problems extending the `PYTHONPATH` for
+multiple Python applications you could have running on your Webfaction instance.
+
+Redditor [nik_doof](http://www.reddit.com/user/nik_doof) suggested a simple solution to this
+problem in the comments on this article. You can re-define any environment variables set in a
+crontab at any time. Cron commands will use the closest previously defined environment variables
+when they run. For example:
+
+    PYTHONPATH=/home/username/lib/pythonX.Y:/home/username/webapps/django/lib/pythonX.Y
+    DJANGO_SETTINGS_MODULE=yourproject.settings
+    ...
+    */10 * * * * /usr/local/bin/pythonX.Y /home/username/path/to/script
+    ...
+    PYTHONPATH=/home/username/lib/pythonX.Y:/home/username/webapps/otherproject/lib/pythonX.Y
+    DJANGO_SETTINGS_MODULE=yourotherproject.settings
+    ...
+    */10 * * * * /usr/local/bin/pythonX.Y /home/username/path/to/script
+    ...
+
 ## Tips
 
 If you're having trouble debugging your crontab, it's helpful to add
 
     MAILTO=youremail@domain.com
 
-at the top of the file. This will e-mail you debugging
-information every time the jobs run - so you may want to disable it when you're done debugging.
+at the top of the file. This will e-mail you debugging information every time the jobs run - so
+you may want to disable it when you're done debugging. You can also set multiple MAILTO variables,
+so different cron jobs can have their debugging information sent to different e-mail addresses.
 
 Another useful thing to do in your crontab is end your job lines like this:
 
