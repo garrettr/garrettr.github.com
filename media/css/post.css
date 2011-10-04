@@ -25,6 +25,8 @@ img { -ms-interpolation-mode:bicubic; }
 p { margin: 0 0 1.5em 0; }
 
 pre { font-size:13px; margin-bottom: 1.5em; background: #ffe; padding: 12px; border: 1px solid silver; }
+code { font-size:14px; background:#ffe; border:1px solid silver; padding:2px; }
+pre > code { font-size:13px; background:#ffe; border:none; padding:none; } /* HACK :( */
 
 a { text-decoration: none; color: #339 }
 a:hover { text-decoration: underline; color: #33f; }
