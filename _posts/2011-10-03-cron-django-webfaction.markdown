@@ -54,7 +54,8 @@ single Django application, or potentially running into problems extending the `P
 multiple Python applications you could have running on your Webfaction instance.
 
 Redditor [nik_doof](http://www.reddit.com/user/nik_doof) suggested a simple solution to this
-problem in the comments on this article. You can re-define any environment variables set in a
+problem in the
+[comments](http://www.reddit.com/r/django/comments/l073v/using_cron_with_django_on_webfaction/) on this article. You can re-define any environment variables set in a
 crontab at any time. Cron commands will use the closest previously defined environment variables
 when they run. For example:
 
