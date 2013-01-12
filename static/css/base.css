@@ -1,0 +1,16 @@
+div#stripe {
+  border-bottom: 1px solid #aaa;
+}
+
+ul#nav {
+  list-style-type:none;
+}
+
+ul#nav li {
+  float:left;
+}
+
+ul#nav li a {
+  display:block;
+  width:60px;
+}

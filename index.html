@@ -1,10 +1,21 @@
 ---
 layout: home 
-title: Garrett Robinson's Blog
+title: Garrett Robinson's Homepage
 ---
 
-<ul id="nav">
-    <li>> <a href="/archive.html">Writing</a></li>
-    <li>> <a href="https://github.com/handsomeransoms">Code</a></li>
-    <li>> <a href="/media/pdf/resume-2011.pdf">Resume</a></li>
-</ul>
+<div class="span7">
+  <p>This is the homepage of Garrett Robinson. I am a developer living in the Bay Area.</p>
+  <p>You can contact me by email at <a href="mailto:garrettr@riseup.net">garrettr@riseup.net</a>.
+  My code is on <a href="https://github.com/garrettr">Github</a>. My Twitter handle is @garrettrobin.
+</div>
+<div class="span5">
+  <h2>Recent Posts</h2>
+  <ol>
+    {% for post in site.posts %}
+    <li>
+    <p><a href="{{ post.url }}">{{ post.title }}</a></p>
+    <p>{{ post.date | date: "%B %m, %Y" }}</p>
+    </li>
+    {% endfor %}
+  </ol>
+</div>
