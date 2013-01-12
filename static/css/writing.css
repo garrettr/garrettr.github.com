@@ -24,7 +24,7 @@ img { -ms-interpolation-mode:bicubic; }
 
 p { margin: 0 0 1.5em 0; }
 
-pre { font-size:13px; margin-bottom: 1.5em; }
+pre { font-size:13px; margin-bottom: 1.5em; overflow:auto; }
 code { font-size:14px; border:1px solid silver; padding:2px; }
 pre > code { font-size:13px; border:none; padding:none; } /* HACK :( */
 
