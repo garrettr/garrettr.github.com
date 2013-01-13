@@ -9,13 +9,14 @@ title: Garrett Robinson's Blog
 {{ post.content | strip_html | truncatewords: 50}}<br/>
 <p><a href="{{ post.url }}">Read More >>></a></p>
 </p>
+<a href="{{ post.url }}">Read More &raquo;</a>
 {% endfor %}
 
 <h2>Archive ({{site.posts | size}} posts)</h2>
 <ol id="archive">
   {% for post in site.posts %}
   <li>
-  <span clas="date">{{ post.date | date: "%d %b %Y" }}</span> > <a href="{{ post.url }}">{{ post.title }}</a>
+  <span clas="date">{{ post.date | date: "%d %b %Y" }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a>
   </li>
   {% endfor %}
 </ol>
