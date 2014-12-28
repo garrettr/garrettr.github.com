@@ -3,7 +3,18 @@ layout: minimal
 title: Garrett Robinson's Blog
 ---
 
+<h1>Garrett's Blog</h1>
+
+{% if site.posts %}
+<h2>Latest Post</h2>
+{% assign latest_post = site.posts|first %}
+<h3>{{ latest_post.title }}</h3>
+<p>{{ latest_post.content | split:"<h" | first }}</p>
+<p><a href="{{ latest_post.url }}">Read more…</a></p>
+{% endif %}
+
 <h2>Posts</h2>
+{% if site.posts %}
 <ol>
   {% for post in site.posts %}
   <li>
@@ -12,6 +23,9 @@ title: Garrett Robinson's Blog
   </li>
   {% endfor %}
 </ol>
+{% else %}
+<p>There are no posts at the moment!</p>
+{% endif %}
 
 <h2>Contact</h2>
 <ul>
