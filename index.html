@@ -5,21 +5,21 @@ title: Garrett Robinson's Blog
 
 <h1>Garrett's Blog</h1>
 
-{% if site.posts %}
+{% if site.posts != empty %}
 <h2>Latest Post</h2>
 {% assign latest_post = site.posts|first %}
 <h3>{{ latest_post.title }}</h3>
-<p>{{ latest_post.content | split:"<h" | first }}</p>
+<p>{{ latest_post.content | truncatewords: 50 }}</p>
 <p><a href="{{ latest_post.url }}">Read more…</a></p>
 {% endif %}
 
 <h2>Posts</h2>
-{% if site.posts %}
+{% if site.posts != empty %}
 <ol>
   {% for post in site.posts %}
   <li>
   <p><a href="{{ post.url }}">{{ post.title }}</a></p>
-  <p>{{ post.date | date: "%B %m, %Y" }}</p>
+  <p>{{ post.date | date: "%d %B %Y" }}</p>
   </li>
   {% endfor %}
 </ol>
