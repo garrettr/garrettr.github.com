@@ -5,11 +5,13 @@ title: Garrett Robinson's Blog
 
 <h1>Garrett's Blog</h1>
 
+<p><em>Please excuse the appearance of this site, this is a work in progress...</em></p>
+
 {% if site.posts != empty %}
 <h2>Latest Post</h2>
 {% assign latest_post = site.posts|first %}
 <h3>{{ latest_post.title }}</h3>
-<p>{{ latest_post.content | truncatewords: 50 }}</p>
+<p>{{ latest_post.excerpt }}</p>
 <p><a href="{{ latest_post.url }}">Read more…</a></p>
 {% endif %}
 
@@ -29,7 +31,7 @@ title: Garrett Robinson's Blog
 
 <h2>Contact</h2>
 <ul>
-    <li><a href="mailto:garrettr@riseup.net">email</a> (<a href="static/garrettr@riseup.net.asc">pubkey</a>)</li>
-<li><a href="https://github.com/garrettr">github</a></li>
-<li><a href="https://twitter.com/garrettr_">twitter</a></li>
+  <li><a href="mailto:garrettr@riseup.net">email</a> (<a href="key.asc">gpg</a>)</li>
+	<li><a href="https://github.com/garrettr">github</a></li>
+	<li><a href="https://twitter.com/garrettr_">twitter</a></li>
 </ul>
